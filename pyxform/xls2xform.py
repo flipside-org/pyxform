@@ -16,7 +16,7 @@ def xls2xform_convert():
     survey = builder.create_survey_element_from_dict(json_survey)
     #Setting validate to false will cause the form not to be processed by ODK Validate.
     #This may be desirable since ODK Validate requires launching a subprocess that runs some java code.
-    survey.print_xform_to_file(argv[2], validate=True, warnings=warnings)
+    survey.print_xform_to_file(argv[2], validate=False, warnings=warnings)
     
     return warnings
 
